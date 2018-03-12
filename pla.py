@@ -28,5 +28,5 @@ if __name__ == '__main__':
 	print(x_list)
 	y_list = [np.sign(wf.dot(x)) for x in x_list]
 	print(y_list)
-	
+
 	
