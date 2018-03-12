@@ -6,12 +6,12 @@ import cProfile
 def perceptron(x_list, y_list):
 	w = np.zeros(4)
 	print(w)
-        while True:
+	while True:
 		for i in range(len(x_list)):
 			if np.sign(w.dot(x_list[i])) != y_list[i] and y_list[i] != 0:
-			w = w + y_list[i]*x_list[i]
-			print(w)
-			break
+				w = w + y_list[i]*x_list[i]
+				print(w)
+				break
 		else:
 			break
 		continue
@@ -31,4 +31,3 @@ if __name__ == '__main__':
 
 	cProfile.run('w = perceptron(x_list, y_list)')
 	print(w)
-	
