@@ -29,4 +29,7 @@ if __name__ == '__main__':
 	y_list = [np.sign(wf.dot(x)) for x in x_list]
 	print(y_list)
 
-	
+	cProfile.run('w = perceptron(x_list, y_list)')
+	print(w)
+
+		
