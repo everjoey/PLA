@@ -16,3 +16,13 @@ def perceptron(x_list, y_list):
 			break
 		continue
 	return w
+
+if __name__ == '__main__':
+	wf = np.array([1,1,1,1])
+	x_list = [np.array([
+	random.randrange(-10,10)+random.random(),
+	random.randrange(-10,10)+random.random(),
+	random.randrange(-10,10)+random.random(),
+	1,
+	]) for i in range(10000)]
+	
