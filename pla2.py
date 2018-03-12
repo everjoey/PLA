@@ -16,3 +16,19 @@ def perceptron2(x_list, y_list):
 		if err_count == 0:
 			break
 	return w
+
+if __name__ == '__main__':
+	wf = np.array([1,1,1,1])
+	x_list = [np.array([
+	random.randrange(-10,10)+random.random(),
+	random.randrange(-10,10)+random.random(),
+	random.randrange(-10,10)+random.random(),
+	1,
+	]) for i in range(10000)]
+	print(x_list)
+	y_list = [np.sign(wf.dot(x)) for x in x_list]
+	print(y_list)
+
+	cProfile.run('w = perceptron2(x_list, y_list)')
+	print(w)
+
