@@ -10,4 +10,3 @@ def perceptron(x_list, y_list):
 		for i in range(len(x_list)):
 			if np.sign(w.dot(x_list[i])) != y_list[i] and y_list[i] != 0:
 				
-			
