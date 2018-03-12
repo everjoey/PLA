@@ -31,5 +31,4 @@ if __name__ == '__main__':
 
 	cProfile.run('w = perceptron(x_list, y_list)')
 	print(w)
-
-		
+	
