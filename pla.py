@@ -12,4 +12,7 @@ def perceptron(x_list, y_list):
 			w = w + y_list[i]*x_list[i]
 			print(w)
 			break
-		
+		else:
+			break
+		continue
+	return w
