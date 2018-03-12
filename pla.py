@@ -25,4 +25,8 @@ if __name__ == '__main__':
 	random.randrange(-10,10)+random.random(),
 	1,
 	]) for i in range(10000)]
+	print(x_list)
+	y_list = [np.sign(wf.dot(x)) for x in x_list]
+	print(y_list)
+	
 	
