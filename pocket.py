@@ -31,6 +31,6 @@ if __name__ == '__main__':
 	print(x_list)
 	y_list = [np.sign(wf.dot(x)) for x in x_list]
 	print(y_list)
-	
-	cProfile.run('w = pocket(x_list, y_list)')
+
+	cProfile.run('w = pocket(x_list, y_list, 40000)')
 	print(w)
