@@ -3,7 +3,7 @@ import numpy as np
 import random
 import cProfile
 
-def perceptron3(x_list, y_list, limit):
+def pocket(x_list, y_list, limit):
 	wp = np.zeros(4)
 	print(wp)
 	wp_err_count = sum([np.sign(wp.dot(x_list[i])) != y_list[i] for i in range(len(x_list))])
@@ -32,5 +32,5 @@ if __name__ == '__main__':
 	y_list = [np.sign(wf.dot(x)) for x in x_list]
 	print(y_list)
 	
-	cProfile.run('w = perceptron(x_list, y_list)')
+	cProfile.run('w = pocket(x_list, y_list)')
 	print(w)
