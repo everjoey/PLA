@@ -12,7 +12,7 @@ def perceptron3(x_list, y_list, limit):
 		j = random.randrange(len(x_list))
 		x = x_list[j]
 		y = y_list[j]
-                if np.sign(wp.dot(x)) != y and y != 0:
+		if np.sign(wp.dot(x)) != y and y != 0:
 			w = wp + y*x
 			print(w)
 			w_err_count = sum([np.sign(w.dot(x_list[i])) != y_list[i] for i in range(len(x_list))])
