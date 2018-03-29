@@ -12,7 +12,7 @@ def logistic_regression(x, y):
 		grad = np.dot(-y*expit(-y*np.dot(w, x.T)), x)/N
 		norm = np.linalg.norm(grad)
 		print(norm)
-                if norm < 0.0001:
+		if norm < 0.0001:
 			break
 		else:
 			w = w - 0.1*grad
