@@ -19,3 +19,14 @@ def logistic_regression(x, y):
 	print(i)
 
 	return w
+
+if __name__ == '__main__':
+	import cProfile
+	import random
+
+	N = 100000
+        wf = np.array([0.3, 0.6, 0.6, 0.3])
+	x_list = -10 + 20*np.random.rand(N, len(wf))
+	y_list = np.array([np.random.choice([1, -1], p=[expit(wf.dot(x)), 1 - expit(wf.dot(x))]) for x in x_list])
+	cProfile.run('w = logistic_regression(x_list, y_list)')
+	print(w)
